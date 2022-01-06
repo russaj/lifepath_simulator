@@ -21,6 +21,13 @@ witcherCharacter = {
 "STA" : 0,
 "REC" : 0
 },
+"lifePath": {
+"Familial Fate": True,
+"Family Northern Status": 0,
+"Parental Fate" : True,
+"Parent Northern Status": 0,
+"Family Status" : 0
+},
 "Armor" : {
 "Head" : 0,
 "Upper Body" : 0,
