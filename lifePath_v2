@@ -1,0 +1,7 @@
+region = ("Northern", "Nilfgaard", "Elderlands")
+nilfgaardian = ("The Heart of Nilfgaard", "The Heart of Nilfgaard", "The Heart of Nilfgaard", "Vassal", "Vassal", "Vassal", "Vassal")
+elderland = ("Elf", "Dwarf")
+northernOrigin = ("Redania", "Kaedwen", "Temeria", "Aedirn", "Lyria & Rivia", "Kovir & Poviss", "Skellige", "Cidaris", "Verden", "Cintra")
+vassalOrigin = ("Vicovaro", "Angren", "Nazair", "Mettina", "Mag Turga", "Gheso", "Maecht", "Gemmeria", "Etolia")
+family = ("Your Family is Alive and Together", "Something Happened to Your Family")
+parents = ("Your Parents are Alive", "Something Happened to Your Parents")
