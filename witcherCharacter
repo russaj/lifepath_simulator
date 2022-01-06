@@ -1,4 +1,4 @@
-witcherCharacter = {
+playerCharacter = {
 "Info" : {
 "Name" : "",
 "Race" : "",
