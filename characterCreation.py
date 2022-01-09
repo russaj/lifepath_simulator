@@ -4,3 +4,4 @@ import lifepath_easyMode
 print ("Hello and welcome to the Witcher TTRP Character Creation Assistant. We will be using information from the FREE Easy Mode Document, which is a truncated version of the full Life Path process.")
 witcherCharacter.playerCharacter["Info"]["Name"] = input("Let's get started by you saying your name? ")
 print(witcherCharacter.playerCharacter["Info"]["Name"])
+print('test of whether git works on this laptop')
