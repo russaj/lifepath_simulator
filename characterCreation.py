@@ -18,9 +18,9 @@ yourFamilyFate = lifepath_easyMode.familiarFateRoll[r]
 print('Your family\'s fate:')
 print(yourFamilyFate)
 #where should we store this?
-print("BEFORE: " + witcherCharacter.playerCharacter["lifePath"]["Familial Fate"])
+print("BEFORE TEST: " + witcherCharacter.playerCharacter["lifePath"]["Familial Fate"])
 witcherCharacter.playerCharacter["lifePath"]["Familial Fate"] = yourFamilyFate
-print("AFTER: " + (witcherCharacter.playerCharacter["lifePath"]["Familial Fate"]))
+print("AFTER TEST: " + (witcherCharacter.playerCharacter["lifePath"]["Familial Fate"]))
 
 
 
@@ -31,6 +31,9 @@ yourParentsFate = lifepath_easyMode.parentalFateRoll[r2]
 print('Your parent\'s fate:')
 print(yourParentsFate)
 #where should we store this?
+print("BEFORE TEST: " + witcherCharacter.playerCharacter["lifePath"]["Parental Fate"])
+witcherCharacter.playerCharacter["lifePath"]["Parental Fate"] = yourParentsFate
+print("AFTER TEST: " + witcherCharacter.playerCharacter["lifePath"]["Parental Fate"])
 
 
 famStatusLength = len(lifepath_easyMode.familyStatus)
@@ -39,3 +42,6 @@ yourFamStatus= lifepath_easyMode.familyStatus[r3]
 print('Your family\'s status:')
 print(yourFamStatus)
 #where should we store this?
+print("BEFORE TEST: " + witcherCharacter.playerCharacter["lifePath"]["Family Status"])
+witcherCharacter.playerCharacter["lifePath"]["Family Status"] = yourFamStatus
+print("AFTER TEST: " + witcherCharacter.playerCharacter["lifePath"]["Family Status"])

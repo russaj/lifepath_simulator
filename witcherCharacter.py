@@ -28,7 +28,7 @@ playerCharacter = {
 "Family Northern Status": 0,
 "Parental Fate" : "",
 "Parent Northern Status": 0,
-"Family Status" : 0
+"Family Status" : ""
 },
 "Armor" : {
 "Head" : 0,
