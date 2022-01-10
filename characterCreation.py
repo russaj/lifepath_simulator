@@ -17,3 +17,12 @@ print('TEST, the random number is: ' + str(r))
 yourFamilyFate = lifepath_easyMode.familiarFateRoll[r]
 print('Your family\'s fate:')
 print(yourFamilyFate)
+#where should we store this?
+
+
+parentsFateLength = len(lifepath_easyMode.parentalFateRoll)
+r2 = random.randint(1, (parentsFateLength-1))
+print('TEST, the random number is: ' + str(r2))
+yourParentsFate = lifepath_easyMode.parentalFateRoll[r2]
+print('Your parent\'s fate:')
+print(yourParentsFate)
