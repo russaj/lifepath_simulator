@@ -18,6 +18,10 @@ yourFamilyFate = lifepath_easyMode.familiarFateRoll[r]
 print('Your family\'s fate:')
 print(yourFamilyFate)
 #where should we store this?
+print("BEFORE: " + witcherCharacter.playerCharacter["lifePath"]["Familial Fate"])
+witcherCharacter.playerCharacter["lifePath"]["Familial Fate"] = yourFamilyFate
+print("AFTER: " + (witcherCharacter.playerCharacter["lifePath"]["Familial Fate"]))
+
 
 
 parentsFateLength = len(lifepath_easyMode.parentalFateRoll)

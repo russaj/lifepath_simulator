@@ -22,7 +22,7 @@ playerCharacter = {
 "REC" : 0
 },
 "lifePath": {
-"Familial Fate": True,
+"Familial Fate": "",
 "Family Northern Status": 0,
 "Parental Fate" : True,
 "Parent Northern Status": 0,
