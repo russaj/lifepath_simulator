@@ -1,3 +1,5 @@
+#Changed familial and family fate to empty strings from booleans
+
 playerCharacter = {
 "Info" : {
 "Name" : "",
@@ -22,11 +24,11 @@ playerCharacter = {
 "REC" : 0
 },
 "lifePath": {
-"Familial Fate": True,
+"Familial Fate": "",
 "Family Northern Status": 0,
-"Parental Fate" : True,
+"Parental Fate" : "",
 "Parent Northern Status": 0,
-"Family Status" : 0
+"Family Status" : ""
 },
 "Armor" : {
 "Head" : 0,
