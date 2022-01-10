@@ -26,9 +26,12 @@ print('TEST, the random number is: ' + str(r2))
 yourParentsFate = lifepath_easyMode.parentalFateRoll[r2]
 print('Your parent\'s fate:')
 print(yourParentsFate)
+#where should we store this?
+
 
 famStatusLength = len(lifepath_easyMode.familyStatus)
 r3 = random.randint(1, (famStatusLength-1))
 yourFamStatus= lifepath_easyMode.familyStatus[r3]
 print('Your family\'s status:')
 print(yourFamStatus)
+#where should we store this?
