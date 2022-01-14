@@ -50,15 +50,13 @@ else:
 print(witcherCharacter.playerCharacter["Info"])
 
 print(f'Well, {witcherCharacter.playerCharacter["Info"]["Name"]}, now we must select stats.')
+# there are 9 stats, rolled at random. 1's and 2's are rerolled. Players then select the individual rolls to each of the stats.
 stats = []
-i = 0
-while i <= 9:
+for i in range(0,9):
     n = random.randint(3,9)
     stats.append(n)
-    i = i+1
 print(stats)
-#for x in stats:
-#  print(x)
+
 
 #trying to randomly select from a list in lifepath_easyMode
 #famFateLength = len(lifepath_easyMode.familiarFateRoll)
