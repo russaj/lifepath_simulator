@@ -71,18 +71,20 @@ i = 0
 #dictionary version still needs to have numbers removed from rawStatNums list
 counter = 0
 print(f'Your currents rawStatNums are: {witcherCharacter.playerCharacter["Stats"]}, \n You got to start somewhere, I suppose.')
-while counter <= 9: #changing to < as opposed to <=, otherwise indexoutofrange
+while counter < 9: #changing to < as opposed to <=, otherwise indexoutofrange
     print('TEST, what is counter at: ' + str(counter))
-    print('TEST of counter, should start at pos 1: ' + str(rawStatNums[counter]))
+    #print('TEST of counter, should start at pos 1: ' + str(rawStatNums[counter]))
     while True: #trying to deal with bad input
-        statChoice = input(f'where should {rawStatNums[counter]} go? \n')
-        if statChoice.upper() in witcherCharacter.StatsAsList:
+        statChoice = input(f'where should {rawStatNums[0]} go? \n')
+        #statChoice = input(f'where should {rawStatNums[counter]} go? \n')
+        statChoice = statChoice.upper()
+        if statChoice in witcherCharacter.StatsAsList:
             #print(rawStatNums[counter])
-            print(f'You have chosen {rawStatNums[counter]} for {statChoice}')
-            witcherCharacter.playerCharacter["Stats"][statChoice] = int(rawStatNums[counter])
-            statRemove = rawStatNums[counter]
+            print(f'You have chosen {rawStatNums[0]} for {statChoice}')
+            witcherCharacter.playerCharacter["Stats"][statChoice] = int(rawStatNums[0])
+            statRemove = rawStatNums[0]
             rawStatNums.remove(statRemove)
-            witcherCharacter.StatsAsList.remove(statChoice.upper())
+            witcherCharacter.StatsAsList.remove(statChoice)
             print('Stats that still need to be filled out: ')
             print(witcherCharacter.StatsAsList)
             print("stat number choices remaining: ")
@@ -92,8 +94,8 @@ while counter <= 9: #changing to < as opposed to <=, otherwise indexoutofrange
             break
         print('Have ye no brains? Enter a proper stat, you fool!')
 
-
-
+print('Good job, you picked your stats! They are:')
+print(witcherCharacter.playerCharacter["Stats"])
 
 #trying to randomly select from a list in lifepath_easyMode
 #famFateLength = len(lifepath_easyMode.familiarFateRoll)
