@@ -1,6 +1,7 @@
+raceChoice = ["Human", "Elf", "Dwarf", "Witcher"]
+stats = ["INT", "REF", "DEX", "SPD", "EMP", "CRA", "WILL", "LUCK", "BODY"]
 familialFate = ("At least Some of Your Family Is Alive", "Something Happened to Your Family")
 parentalFate = ("Your Parents Are Alive", "Something Happened to Your Parents")
-
 
 #changing these to lists for easier randomized selection
 familiarFateRoll = ["Your family was scattered to the winds by the wars and you have no idea where most of them are.",
