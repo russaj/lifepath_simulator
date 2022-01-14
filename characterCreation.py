@@ -10,33 +10,22 @@ print(witcherCharacter.playerCharacter["Info"]["Name"] + ", an interesting name 
 
 #print(lifepath_easyMode.raceChoice)
 race = input("Would you like to select your race or have it randomly selected? 'A' for Choose or 'B' for Random: \n")
-#print(race)
-if race == "A":
+#print(race.upper())
+if race.upper() == "A":
     print("So you shall choose...")
     print(lifepath_easyMode.raceChoice)
     print(witcherCharacter.playerCharacter["Info"]["Race"])
     race = input("Which shall it be: Human, Elf, Dwarf, or Witcher?\n")
-    #print(f'You entered {race}')
-    if race == "Human":
-        #print(f'You entered {lifepath_easyMode.raceChoice[0]}')
-        witcherCharacter.playerCharacter["Info"]["Race"] = lifepath_easyMode.raceChoice[0]
-        print(f'{witcherCharacter.playerCharacter["Info"]["Race"]}, how fascinating!')
-    elif race == "Elf":
-        #print(f'You entered {lifepath_easyMode.raceChoice[1]}')
-        witcherCharacter.playerCharacter["Info"]["Race"] = lifepath_easyMode.raceChoice[1]
-        print(f'{witcherCharacter.playerCharacter["Info"]["Race"]}, how fascinating!')
-    elif race == "Dwarf":
-        #print(f'You entered {lifepath_easyMode.raceChoice[2]}')
-        witcherCharacter.playerCharacter["Info"]["Race"] = lifepath_easyMode.raceChoice[2]
-        print(f'{witcherCharacter.playerCharacter["Info"]["Race"]}, how fascinating!')
-    elif race == "Witcher":
-        #print(f'You entered {lifepath_easyMode.raceChoice[3]}')
-        witcherCharacter.playerCharacter["Info"]["Race"] = lifepath_easyMode.raceChoice[3]
-        print(f'{witcherCharacter.playerCharacter["Info"]["Race"]} how fascinating!')
+    print(f'You entered {race.capitalize()}')
+
+    if race.capitalize() in lifepath_easyMode.raceChoice:
+        race = int(str(lifepath_easyMode.raceChoice.index(race.capitalize())));
+        print(f'You have chosen {lifepath_easyMode.raceChoice[race]}')
+        witcherCharacter.playerCharacter["Info"]["Race"] = lifepath_easyMode.raceChoice[race]
     else:
         print("Hmm, I don't quite recognize that.")
         print(witcherCharacter.playerCharacter["Info"])
-elif race == "B":
+elif race.upper() == "B":
     print("You shall let fate decide! Brave.")
     r = random.randint(1, 4)
     #print(r)
@@ -50,7 +39,6 @@ else:
 print(witcherCharacter.playerCharacter["Info"])
 
 print(f'Well, {witcherCharacter.playerCharacter["Info"]["Name"]}, now we must select stats.')
-# there are 9 stats, rolled at random. 1's and 2's are rerolled. Players then select the individual rolls to each of the stats.
 stats = []
 for i in range(0,9):
     n = random.randint(3,9)
