@@ -72,9 +72,9 @@ i = 0
 counter = 0
 print(f'Your currents rawStatNums are: {witcherCharacter.playerCharacter["Stats"]}, \n You got to start somewhere, I suppose.')
 while counter <= 9: #changing to < as opposed to <=, otherwise indexoutofrange
-    for i in rawStatNums:
-        print('TEST, what is counter at: ' + str(counter))
-        print('TEST of counter, should start at pos 1: ' + str(rawStatNums[counter]))
+    print('TEST, what is counter at: ' + str(counter))
+    print('TEST of counter, should start at pos 1: ' + str(rawStatNums[counter]))
+    while True: #trying to deal with bad input
         statChoice = input(f'where should {rawStatNums[counter]} go? \n')
         if statChoice.upper() in witcherCharacter.StatsAsList:
             #print(rawStatNums[counter])
@@ -83,10 +83,16 @@ while counter <= 9: #changing to < as opposed to <=, otherwise indexoutofrange
             statRemove = rawStatNums[counter]
             rawStatNums.remove(statRemove)
             witcherCharacter.StatsAsList.remove(statChoice.upper())
-            print("stat choices remaining: ")
+            print('Stats that still need to be filled out: ')
+            print(witcherCharacter.StatsAsList)
+            print("stat number choices remaining: ")
             print(rawStatNums)
             counter = counter + 1
-        print(witcherCharacter.playerCharacter["Stats"])
+            print(witcherCharacter.playerCharacter["Stats"])
+            break
+        print('Have ye no brains? Enter a proper stat, you fool!')
+
+
 
 
 #trying to randomly select from a list in lifepath_easyMode
