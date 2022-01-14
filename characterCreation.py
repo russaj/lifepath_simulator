@@ -17,7 +17,7 @@ if race.upper() == "A":
     print(witcherCharacter.playerCharacter["Info"]["Race"])
     race = input("Which shall it be: Human, Elf, Dwarf, or Witcher?\n")
     print(f'You entered {race.capitalize()}')
-
+#this will run through the list of races in lifepath_easyMode and compare it to the capitalized version of whatever the user inputs. It's a bit clunky, but then the program takes the indexed number within the list and uses that to add the correct race to the playerCharacter dictionary.
     if race.capitalize() in lifepath_easyMode.raceChoice:
         race = int(str(lifepath_easyMode.raceChoice.index(race.capitalize())));
         print(f'You have chosen {lifepath_easyMode.raceChoice[race]}')
@@ -34,6 +34,7 @@ elif race.upper() == "B":
     race = witcherCharacter.playerCharacter["Info"]["Race"]
     print(f'a {race}, a race of surprise as it were?')
 else:
+    #need to add a loop in here if neither A nor B is selected
     print("Please type 'A' or 'B'.")
 
 print(witcherCharacter.playerCharacter["Info"])
