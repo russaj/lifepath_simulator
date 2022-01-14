@@ -6,23 +6,24 @@ playerCharacter = {
 "Race" : "",
 "Profession" : ""
 },
-"Stats" : {
-"INT" : 0,
-"REF" : 0,
-"DEX" : 0,
-"BODY" : 0,
-"SPD" : 0,
-"EMP" : 0,
-"CRA" : 0,
-"WILL" : 0,
-"LUCK" : 0,
-"VIGOR" : 0,
-"SAVE" : 0,
-"LEAP" : 0,
-"HP" : 0,
-"STA" : 0,
-"REC" : 0
-},
+#lets start stats as a list and then MAKE it a dict, will explain why (JH)
+"Stats" : [
+"INT",
+"REF",
+"DEX",
+"BODY",
+"SPD" ,
+"EMP" ,
+"CRA" ,
+"WILL" ,
+"LUCK" ,
+"VIGOR",
+"SAVE" ,
+"LEAP" ,
+"HP" ,
+"STA" ,
+"REC"
+],
 "lifePath": {
 "Familial Fate": "",
 "Family Northern Status": 0,
