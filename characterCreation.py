@@ -44,6 +44,7 @@ stats = []
 for i in range(0,9):
     n = random.randint(3,9)
     stats.append(n)
+print('The dice have been rolled. These are the numbers you get to choose from!')
 print(stats)
 
 i = 0
@@ -68,8 +69,9 @@ i = 0
 #dictionary version still needs to have numbers removed from stats list
 counter = 0
 print(f'Your currents stats are: {witcherCharacter.playerCharacter["Stats"]}, \n You got to start somewhere, I suppose.')
-while counter < 9: #changing to < as opposed to <=
+while counter < 9: #changing to < as opposed to <=, otherwise indexoutofrange
     for counter in stats:
+        print('TEST of counter, should start at pos 1: ' + str(stats[counter]))
         statChoice = input(f'where should {stats[counter]} go? \n')
         if statChoice.upper() in witcherCharacter.playerCharacter["Stats"].keys():
             print(stats[counter])
