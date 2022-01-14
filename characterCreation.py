@@ -11,29 +11,29 @@ import random
 
 #trying to randomly select from a list in lifepath_easyMode
 famFateLength = len(lifepath_easyMode.familiarFateRoll)
-print('TEST, how many familiar fate rolls: ' + str(famFateLength))
+#print('TEST, how many familiar fate rolls: ' + str(famFateLength))
 r =random.randint(1, (famFateLength-1))
-print('TEST, the random number is: ' + str(r))
+#print('TEST, the random number is: ' + str(r))
 yourFamilyFate = lifepath_easyMode.familiarFateRoll[r]
 print('Your family\'s fate:')
 print(yourFamilyFate)
 #where should we store this?
-print("BEFORE TEST: " + witcherCharacter.playerCharacter["lifePath"]["Familial Fate"])
+#print("BEFORE TEST: " + witcherCharacter.playerCharacter["lifePath"]["Familial Fate"])
 witcherCharacter.playerCharacter["lifePath"]["Familial Fate"] = yourFamilyFate
-print("AFTER TEST: " + (witcherCharacter.playerCharacter["lifePath"]["Familial Fate"]))
+#print("AFTER TEST: " + (witcherCharacter.playerCharacter["lifePath"]["Familial Fate"]))
 
 
 
 parentsFateLength = len(lifepath_easyMode.parentalFateRoll)
 r2 = random.randint(1, (parentsFateLength-1))
-print('TEST, the random number is: ' + str(r2))
+#print('TEST, the random number is: ' + str(r2))
 yourParentsFate = lifepath_easyMode.parentalFateRoll[r2]
 print('Your parent\'s fate:')
 print(yourParentsFate)
 #where should we store this?
-print("BEFORE TEST: " + witcherCharacter.playerCharacter["lifePath"]["Parental Fate"])
+#print("BEFORE TEST: " + witcherCharacter.playerCharacter["lifePath"]["Parental Fate"])
 witcherCharacter.playerCharacter["lifePath"]["Parental Fate"] = yourParentsFate
-print("AFTER TEST: " + witcherCharacter.playerCharacter["lifePath"]["Parental Fate"])
+#print("AFTER TEST: " + witcherCharacter.playerCharacter["lifePath"]["Parental Fate"])
 
 
 famStatusLength = len(lifepath_easyMode.familyStatus)
@@ -42,6 +42,6 @@ yourFamStatus= lifepath_easyMode.familyStatus[r3]
 print('Your family\'s status:')
 print(yourFamStatus)
 #where should we store this?
-print("BEFORE TEST: " + witcherCharacter.playerCharacter["lifePath"]["Family Status"])
+#print("BEFORE TEST: " + witcherCharacter.playerCharacter["lifePath"]["Family Status"])
 witcherCharacter.playerCharacter["lifePath"]["Family Status"] = yourFamStatus
-print("AFTER TEST: " + witcherCharacter.playerCharacter["lifePath"]["Family Status"])
+#print("AFTER TEST: " + witcherCharacter.playerCharacter["lifePath"]["Family Status"])
