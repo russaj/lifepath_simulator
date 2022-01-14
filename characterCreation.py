@@ -48,24 +48,35 @@ print(stats)
 
 i = 0
 #cycle through stats list using User input to add specific number to Stat in character dictionary.
+#while i <= 9:
+#    for i in stats:
+#        statChoice = input(f'where should {stats[i]} go? \n')
+#        if statChoice.upper() in lifepath_easyMode.stats:
+#            print(stats[i])
+#            print(f'You have chosen {stats[i]} for {statChoice}')
+#            witcherCharacter.playerCharacter["Stats"][statChoice] = int(stats[i])
+#            #remove specific stat from list once it has be selected.
+#            del stats[i]
+#            print(stats)
+#        else:
+#            print("Hmm, I don't quite recognize that.")
+#        #show current breakdown of selected stats
+#        print(witcherCharacter.playerCharacter["Stats"])
+#        i = i + 1
+#    break
+#print(f'How do these look? {witcherCharacter.playerCharacter["Stats"]}')
+#dictionary version still needs to have numbers removed from stats list
+print(f'Your currents stats are: {witcherCharacter.playerCharacter["Stats"]}, \n You got to start somewhere, I suppose.')
 while i <= 9:
     for i in stats:
         statChoice = input(f'where should {stats[i]} go? \n')
-        if statChoice.upper() in lifepath_easyMode.stats:
+        if statChoice.upper() in witcherCharacter.playerCharacter["Stats"].keys():
             print(stats[i])
-            #race = int(str(lifepath_easyMode.raceChoice.index(race.capitalize())));
             print(f'You have chosen {stats[i]} for {statChoice}')
             witcherCharacter.playerCharacter["Stats"][statChoice] = int(stats[i])
-            #remove specific stat from list once it has be selected.
-            del stats[i]
             print(stats)
-        else:
-            print("Hmm, I don't quite recognize that.")
-        #show current breakdown of selected stats
+            i = i + 1
         print(witcherCharacter.playerCharacter["Stats"])
-        i = i + 1
-    break
-print(f'How do these look? {witcherCharacter.playerCharacter["Stats"]}')
 
 
 #trying to randomly select from a list in lifepath_easyMode
