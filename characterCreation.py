@@ -66,18 +66,19 @@ i = 0
 #    break
 #print(f'How do these look? {witcherCharacter.playerCharacter["Stats"]}')
 #dictionary version still needs to have numbers removed from stats list
+counter = 0
 print(f'Your currents stats are: {witcherCharacter.playerCharacter["Stats"]}, \n You got to start somewhere, I suppose.')
-while i <= 9:
-    for i in stats:
-        statChoice = input(f'where should {stats[i]} go? \n')
+while counter < 9: #changing to < as opposed to <=
+    for counter in stats:
+        statChoice = input(f'where should {stats[counter]} go? \n')
         if statChoice.upper() in witcherCharacter.playerCharacter["Stats"].keys():
-            print(stats[i])
-            print(f'You have chosen {stats[i]} for {statChoice}')
+            print(stats[counter])
+            print(f'You have chosen {stats[counter]} for {statChoice}')
             witcherCharacter.playerCharacter["Stats"][statChoice] = int(stats[i])
-            statRemove = stats[i]
+            statRemove = stats[counter]
             stats.remove(statRemove)
             print(stats)
-            i = i + 1
+            counter = counter + 1
         print(witcherCharacter.playerCharacter["Stats"])
 
 
