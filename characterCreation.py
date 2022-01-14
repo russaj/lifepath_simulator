@@ -74,6 +74,8 @@ while i <= 9:
             print(stats[i])
             print(f'You have chosen {stats[i]} for {statChoice}')
             witcherCharacter.playerCharacter["Stats"][statChoice] = int(stats[i])
+            statRemove = stats[i]
+            stats.remove(statRemove)
             print(stats)
             i = i + 1
         print(witcherCharacter.playerCharacter["Stats"])
