@@ -17,7 +17,7 @@ if race.upper() == "A":
     print(witcherCharacter.playerCharacter["Info"]["Race"])
     race = input("Which shall it be: Human, Elf, Dwarf, or Witcher?\n")
     print(f'You entered {race.capitalize()}')
-#this will run through the list of races in lifepath_easyMode and compare it to the capitalized version of whatever the user inputs. It's a bit clunky, but then the program takes the indexed number within the list and uses that to add the correct race to the playerCharacter dictionary.
+
     if race.capitalize() in lifepath_easyMode.raceChoice:
         race = int(str(lifepath_easyMode.raceChoice.index(race.capitalize())));
         print(f'You have chosen {lifepath_easyMode.raceChoice[race]}')
@@ -34,17 +34,38 @@ elif race.upper() == "B":
     race = witcherCharacter.playerCharacter["Info"]["Race"]
     print(f'a {race}, a race of surprise as it were?')
 else:
-    #need to add a loop in here if neither A nor B is selected
     print("Please type 'A' or 'B'.")
 
 print(witcherCharacter.playerCharacter["Info"])
 
 print(f'Well, {witcherCharacter.playerCharacter["Info"]["Name"]}, now we must select stats.')
 stats = []
+#randomly select numbers for 9 stats, rerolling 1's and 2's
 for i in range(0,9):
     n = random.randint(3,9)
     stats.append(n)
 print(stats)
+
+i = 0
+#cycle through stats list using User input to add specific number to Stat in character dictionary.
+while i <= 9:
+    for i in stats:
+        statChoice = input(f'where should {stats[i]} go? \n')
+        if statChoice.upper() in lifepath_easyMode.stats:
+            print(stats[i])
+            #race = int(str(lifepath_easyMode.raceChoice.index(race.capitalize())));
+            print(f'You have chosen {stats[i]} for {statChoice}')
+            witcherCharacter.playerCharacter["Stats"][statChoice] = int(stats[i])
+            #remove specific stat from list once it has be selected.
+            del stats[i]
+            print(stats)
+        else:
+            print("Hmm, I don't quite recognize that.")
+        #show current breakdown of selected stats
+        print(witcherCharacter.playerCharacter["Stats"])
+        i = i + 1
+    break
+print(f'How do these look? {witcherCharacter.playerCharacter["Stats"]}')
 
 
 #trying to randomly select from a list in lifepath_easyMode
