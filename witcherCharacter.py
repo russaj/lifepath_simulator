@@ -20,7 +20,7 @@ playerCharacter = {
   "VIGOR": 0,
   "STUN": 0,
   #SPDx3
-  "RUN": 0
+  "RUN": 0,
   "SAVE" : 0,
   #Run/5
   "LEAP" : 0,
